@@ -1,4 +1,4 @@
 vendor/
 .idea/
 quotations.zip
-credentials.json
+credentials.backup.json
