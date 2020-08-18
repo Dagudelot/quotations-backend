@@ -22,7 +22,7 @@ class SheetsService
         $client->setScopes([\Google_Service_Sheets::SPREADSHEETS]);
         $client->setAuthConfig($this->env()['credentials']);
         $client->setAccessType('offline');
-        $client->setPrompt('select_account consent');
+       // $client->setPrompt('select_account consent');
 
         if( $accessToken != null ) $client->setAccessToken($accessToken);
 
@@ -36,6 +36,7 @@ class SheetsService
                 // Request authorization from the user.
                 $authUrl = $client->createAuthUrl();
                 header("location:".$authUrl);
+                die();
             }
         }
 

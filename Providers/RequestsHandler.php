@@ -50,7 +50,7 @@ class RequestsHandler
 
             if( $client ){
                 // Return view
-                $return = $this->env()['frontend_url'] . "?auth=true";
+                $return = $this->env()['frontend_url'] . "index.html?auth=true";
                 header("location:".$return);
             }
         }
